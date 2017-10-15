@@ -26,9 +26,15 @@ script:
 - nosetests --no-skip --with-coverage --cover-package=cltk --with-doctest
 
 after_success:
-- codecov
+  codecov
+  python cltk/utils/contributors.py
+  pip list > requirements.txt
 
 deploy:
+  # for pushing contribs and reqs back to gh
+  .travis/push.sh
+
+  # for PyPI
   provider: pypi
   user: kyle_johnson
   on:

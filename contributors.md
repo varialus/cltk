@@ -72,6 +72,9 @@ CLTK Core authors, ordered alphabetically by first name
 * cltk/stem/akkadian/stem.py
 * cltk/stem/akkadian/syllabifier.py
 
+## Mahesh Bhosale <bhosalems24@gmail.com>
+* cltk/corpus/marathi/alphabet.py
+
 ## Martín Pozzi <marpozzi@gmail.com>
 * cltk/corpus/greek/tlg/parse_tlg_indices.py
 
@@ -107,6 +110,10 @@ CLTK Core authors, ordered alphabetically by first name
 * cltk/corpus/greek/tlgu.py
 * cltk/corpus/utils/importer.py
 * cltk/utils/cltk_logger.py
+
+## Taha Zerrouki taha.zerrouki@gmail.com
+* cltk/corpus/arabic/utils/pyarabic/araby.py
+* cltk/corpus/arabic/utils/pyarabic/stack.py
 
 ## Talha Javed Mukhtar <tjaved.bscs15seecs@seecs.edu.pk
 * cltk/corpus/punjabi/alphabet.py
