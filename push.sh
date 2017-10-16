@@ -13,8 +13,8 @@ commit_website_files() {
 }
 
 upload_files() {
-  git remote add origin-pages https://${GITHUB_TOKEN}@github.com/cltk/cltk.git > /dev/null 2>&1
-  git push --quiet --set-upstream push-test push-test
+  git remote add origin https://${GITHUB_TOKEN}@github.com/cltk/cltk.git > /dev/null 2>&1
+  git push --quiet --set-upstream origin push-test
 }
 
 setup_git
