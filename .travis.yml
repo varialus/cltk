@@ -28,7 +28,7 @@ after_success:
 - codecov
 - python cltk/utils/contributors.py
 - pip list > requirements.txt
-- .push.sh
+- ./push.sh
 
 deploy:
   provider: pypi
