@@ -18,17 +18,17 @@ before_script:
 - pip install python-Levenshtein
 - pip install gensim  # for word2vec.py
 
-script:
+#script:
   # Travis CI pre-installs `nose`
   # https://github.com/coagulant/coveralls-python#nosetests
   # http://nose.readthedocs.org/en/latest/plugins/skip.html
-- nosetests --no-skip --with-coverage --cover-package=cltk --with-doctest
+#- nosetests --no-skip --with-coverage --cover-package=cltk --with-doctest
 
 after_success:
-  codecov
-  python cltk/utils/contributors.py
-  pip list > requirements.txt
-  .travis/push.sh
+- codecov
+- python cltk/utils/contributors.py
+- pip list > requirements.txt
+- .travis/push.sh
 
 deploy:
   provider: pypi
