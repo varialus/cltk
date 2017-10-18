@@ -18,6 +18,8 @@ after_success:
 - codecov
 - python cltk/utils/contributors.py
 - pip list > requirements.txt
+- git add contributors.md
+- git add requirements.txt
 deploy:
   provider: releases
   api_key:
@@ -26,3 +28,4 @@ deploy:
   on:
     repo: cltk/cltk
     branch: push-test
+# https://docs.travis-ci.com/user/deployment/#Deploying-to-Multiple-Providers
