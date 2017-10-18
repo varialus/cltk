@@ -17,6 +17,8 @@ commit_website_files() {
 upload_files() {
   echo "Pushing to GitHub ..."
   git remote add origin https://${GITHUB_TOKEN}@github.com/cltk/cltk.git > /dev/null 2>&1
+  echo "What's the remote? ..."
+  git remote -v
   git push --quiet --set-upstream origin auto-branch
 }
 
