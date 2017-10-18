@@ -1,40 +1,28 @@
 sudo: required
-
 language: python
-
-python:
-  '3.6'
-
+python: '3.6'
 install:
 - python setup.py install
-
 before_script:
 - pip install --upgrade pip
 - pip install codecov
 - pip install coveralls
-- pip install pandas  # for the Indian syllabifier
-- pip install greek-accentuation  # for the phonetic transcriber
+- pip install pandas
+- pip install greek-accentuation
 - pip install fuzzywuzzy
 - pip install python-Levenshtein
-- pip install gensim  # for word2vec.py
-
+- pip install gensim
 script:
-  # Travis CI pre-installs `nose`
-  # https://github.com/coagulant/coveralls-python#nosetests
-  # http://nose.readthedocs.org/en/latest/plugins/skip.html
 - nosetests --no-skip --with-coverage --cover-package=cltk --with-doctest
-
 after_success:
 - codecov
 - python cltk/utils/contributors.py
 - pip list > requirements.txt
-- chmod +x push.sh
-- ./push.sh
-
 deploy:
-  provider: pypi
-  user: kyle_johnson
+  provider: releases
+  api_key:
+    secure: iUwU43gmMlVDNe7/vKaBsY8yjcOLLpakM/DLfSxszBQWm3cwciWT2xa33pE3ViStvoP5E0VBEuXDDzaC3hu+aHnMaMyih7EnoEF9Za9WBAmaCv/jzUt9aJdk06KAXK7JIYOEKAw1CQkypYGP96ehqRJ73q3MlWA+YULxJZKEt1M=
+  file: contibutors.md
   on:
-    branch: master
-  password:
-    secure: E67ydyMC4HHeJoT8iMwGosS5cd3I1Fd0+FCEmJLsqHWJQ5/ARpPQHh9YSTelWKJg11OQHeIy+4/ny4QR+uPNZ1Ina0iQzdVoqOzPRHyvcahUz4a0t0l27bYwBXVugtZ4BQP7VlH9l5Mt/R9CFp0oV4lPW22s19BJsso+FKCzeoA=
+    repo: cltk/cltk
+    branch: push-test
