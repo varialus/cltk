@@ -22,7 +22,7 @@ deploy:
   provider: releases
   api_key:
     secure: iUwU43gmMlVDNe7/vKaBsY8yjcOLLpakM/DLfSxszBQWm3cwciWT2xa33pE3ViStvoP5E0VBEuXDDzaC3hu+aHnMaMyih7EnoEF9Za9WBAmaCv/jzUt9aJdk06KAXK7JIYOEKAw1CQkypYGP96ehqRJ73q3MlWA+YULxJZKEt1M=
-  file: contibutors.md
+  file: contributors.md
   on:
     repo: cltk/cltk
     branch: push-test
