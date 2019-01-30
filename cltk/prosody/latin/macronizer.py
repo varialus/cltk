@@ -136,6 +136,7 @@ class Macronizer:
         :return: macronized text
         :rtype : str
         """
+        print("Hello!")
         macronized_words = [entry[2] for entry in self.macronize_tags(text)]
         return " ".join(macronized_words)
 
